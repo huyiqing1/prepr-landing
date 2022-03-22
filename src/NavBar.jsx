@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav className = "nav1 "  >
         <div className = "logoDiv">
-            <img className = ""src = {require("./images/logo.png")} alt = "Logo" width="50" height = "50"/>
+            <img className = ""src = {require("./images/logo.png")} alt = "Logo" width="80" height = "80"/>
             <a className = "anchorTag">Theraport</a>
         </div>
         <div className = "signUp">

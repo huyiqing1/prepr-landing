@@ -8,6 +8,7 @@
   background-color: #334355;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .anchorTag{
@@ -23,7 +24,4 @@
   background-color:#86DCD8;
   background: #86DCD8;
   border-radius: 6px;
-}
-.signUp{
-  margin-top: 10px;
 }
