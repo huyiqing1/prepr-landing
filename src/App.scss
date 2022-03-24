@@ -157,9 +157,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.25em;
   height: 20vh;
-  padding: 5em;
+  padding: 2em;
+  font-size: 0.75em;
   text-align: center;
 }
 
@@ -216,6 +216,12 @@ body {
    
     margin-top: 10%;
   }
+  #practitioners-section-e .practitioners-content-wrap {
+    padding: 5em;
+    font-size: 1.25em;
+  }
+  
+
   
 }
 
