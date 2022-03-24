@@ -97,26 +97,70 @@ body {
 
 //section c
 #practitioners-section-c .practitioners-content-wrap {
-  position: relative;
   display: flex;
-  flex-flow: row wrap;
-  padding: 5em;
-}
-#practitioners-section-c .practitioners-content-wrap > h2 {
-  position: absolute;
-  top:1em;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-#practitioners-section-c .practitioners-content-wrap .flex-item {
-  display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
+}
+
+#practitioners-section-c .practitioners-content-wrap > .flex-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 1em;
+}
+
+//section d 
+
+#practitioners-section-d .practitioners-content-wrap {
+  background-color:#334355;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#practitioners-section-d .practitioners-content-wrap > h2{
+ color: white;
+ margin: 1em;
+}
+
+#practitioners-section-d .practitioners-content-wrap > .flex-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  margin: 1em;
+  width: 70%;
+  background-color: white;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > h4 {
+  margin-left: 0.5em;
+  margin-top: 0em;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > h4:nth-of-type(1) {
+ color: turquoise;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > #image-wrap {
+  height: 300px;
+  width: 100%;
+  background-color: gray;
+}
+
+//section e 
+#practitioners-section-e .practitioners-content-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  height: 20vh;
+  padding: 5em;
   text-align: center;
 }
+
+
 
 
 
@@ -128,14 +172,47 @@ body {
 }
 
 
-// transform container to grid when going to desktop
-@include desktop {
-  // .App {
-  //   display: grid;
-  //   grid-template-columns: repeat(3,1fr);
-  //   grid-template-rows: repeat(4,100vh);
-  // }
 
+@include desktop {
+  //section c
+  #practitioners-section-c .practitioners-content-wrap {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5em;
+    height: 40vh;
+  }
+  #practitioners-section-c .practitioners-content-wrap > h2 {
+    position: absolute;
+    top:1em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #practitioners-section-c .practitioners-content-wrap .flex-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 1em;
+    text-align: center;
+  }
+  //section d
+  #practitioners-section-d .practitioners-content-wrap {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #practitioners-section-d .practitioners-content-wrap > h2 {
+    position: absolute;
+    top: 0em;
+  }
+  #practitioners-section-d .practitioners-content-wrap .flex-item {
+   
+    margin-top: 10%;
+  }
   
 }
 
