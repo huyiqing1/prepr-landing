@@ -1,17 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import Patients from './components/patients/Patients';
 import reportWebVitals from './reportWebVitals';
 import "jquery";
 import "bootstrap/dist/js/bootstrap";
 import "popper.js/dist/umd/popper";
-import "bootstrap/dist/css/bootstrap.css"
+import "bootstrap/dist/css/bootstrap.css";
+
+import {
+  BrowserRouter,
+  Routes, 
+  Route} from 'react-router-dom';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<App/>}/>
+      <Route path='/practitioners' element={<Patients/>}/>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

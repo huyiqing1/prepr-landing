@@ -1,0 +1,105 @@
+// default style
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: roboto, arial, helvetica;
+  color: black;
+  background-color: gray;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  cursor: default;  
+  overflow: hidden;
+}
+
+
+#practitioners-section-a .practitioners-content-wrap {
+  background-color: #334355;
+  padding: 1em;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+#practitioners-section-a .practitioners-content-wrap > * {
+  margin: 0em 0.5em 0em 0.5em;
+}
+#practitioners-section-a .practitioners-content-wrap > h5 {
+  font-size:0.85em;
+}
+#practitioners-section-a .practitioners-content-wrap > h5:nth-of-type(2) {
+  background-color:#86dcd8;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+}
+#practitioners-section-a .practitioners-content-wrap #img-wrap {
+  width: 75px;
+  height: 75px;
+}
+#practitioners-section-a .practitioners-content-wrap img {
+  height: 100%;
+}
+
+#practitionerSignupForm{
+  background-color: #ceced4;
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-practitioner{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.signUp{
+  border-radius: 8px;
+  margin: 3px;
+}
+#background-img{
+  background-image: url('./images/therapist.jpg');
+  padding: 20em;
+  background-repeat: no-repeat;
+}
+
+.practitioners-form h1{
+  color: #334355;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.practitioners-form h4{
+  color: white;
+  font-size: 1em;
+}
+
+.practitioners-form h5{
+  background-color:#86dcd8;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 0.75em;
+
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 768px){
+      @content;
+  }
+}
+
+
+// transform container to grid when going to desktop
+@include desktop {
+  .App {
+    display: grid;
+    // grid-template-columns: repeat(3,1fr);
+    // grid-template-rows: repeat(4,100vh);
+  }
+}
+

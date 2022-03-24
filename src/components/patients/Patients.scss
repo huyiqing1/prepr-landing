@@ -1,0 +1,30 @@
+// default style
+body {
+    margin: 0;
+    padding: 0;
+    font-family: roboto, arial, helvetica;
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    position: relative;
+    cursor: default;  
+    overflow: hidden;
+  }
+  
+  
+  @mixin desktop {
+    @media only screen and (min-width: 768px){
+        @content;
+    }
+  }
+  
+  // transform container to grid when going to desktop
+  @include desktop {
+    .Patients {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(4,100vh);
+    }
+  }
+  
+  
