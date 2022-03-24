@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Patients from './components/patients/Patients';
 import reportWebVitals from './reportWebVitals';
-import "jquery";
-import "bootstrap/dist/js/bootstrap";
-import "popper.js/dist/umd/popper";
-import "bootstrap/dist/css/bootstrap.css";
+
 
 import {
   BrowserRouter,
