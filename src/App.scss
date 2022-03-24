@@ -71,8 +71,9 @@ body {
 }
 #background-img{
   background-image: url('./images/therapist.jpg');
-  padding: 20em;
+  padding: 15em;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .practitioners-form h1{
