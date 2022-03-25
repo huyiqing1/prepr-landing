@@ -15,7 +15,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<App/>}/>
-      <Route path='/practitioners' element={<Patients/>}/>
+      <Route path='/patients' element={<Patients/>}/>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

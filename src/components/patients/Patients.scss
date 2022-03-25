@@ -1,21 +1,136 @@
 // default style
 body {
-    margin: 0;
-    padding: 0;
-    font-family: roboto, arial, helvetica;
-    color: black;
-    font-size: 1.5em;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: roboto, arial, helvetica;
+  color: black;
+  background-color: gray;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  cursor: default;  
+  }
+
+  //section a
+#patients-section-a .patients-content-wrap {
+  position: relative;
+  background-color: #334355;
+  padding: 1em;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: start;
+  flex-flow: row wrap;
+}
+#patients-section-a .patients-content-wrap > * {
+  margin: 0em 0.5em 0em 0.5em;
+}
+#patients-section-a .patients-content-wrap > section {
+  position: absolute;
+  right: 0em;
+  display: flex;
+  align-items: center;
+}
+#patients-section-a .patients-content-wrap > section h5 {
+  font-size:0.85em;
+  margin: 0em 1em 0em 1em;
+}
+#patients-section-a .patients-content-wrap >section h5:nth-of-type(2) {
+  background-color:#86dcd8;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+}
+#patients-section-a .patients-content-wrap #img-wrap {
+  width: 75px;
+  height: 75px;
+}
+#patients-section-a .patients-content-wrap img {
+  height: 100%;
+}
+  
+  //section b
+
+  .patients-img-container{
+    background-image: url(../../images/patient.jpg);
+    padding: 10em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+  }
+
+  .search {
+    width: 100%;
     position: relative;
-    cursor: default;  
-    overflow: hidden;
+    display: flex;
   }
   
-
-  // section a
-
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
   
-  // section b
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }y
+
+  //section c
+#patients-section-c .patients-content-wrap {
+  background-color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.firstP{
+  color: white;
+  font-size: 1.5em;
+  opacity: 1;
+  font-weight: bold;
+}
+.secondP{
+  color: white;
+  font-size: 1.25em;
+  opacity: 1;
+  font-weight: bold;
+}
+#patients-section-c .patients-content-wrap > .flex-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1em;
+}
+
   
   @mixin desktop {
     @media only screen and (min-width: 768px){
@@ -25,6 +140,36 @@ body {
   
   // transform container to grid when going to desktop
   @include desktop {
+<<<<<<< HEAD
+=======
+    // .Patients {
+    //   display: grid;
+    //   grid-template-columns: repeat(3,1fr);
+    //   grid-template-rows: repeat(4,100vh);
+    // }
+    #patients-section-c .patients-content-wrap {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 5em;
+      height: 40vh;
+    }
+    #patients-section-c .patients-content-wrap > h2 {
+      position: absolute;
+      top:1em;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    #patients-section-c .patients-content-wrap .flex-item {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      margin: 1em;
+      text-align: center;
+    }
+>>>>>>> 60c394531a98ab02abc0ac85c0a778e0531d0fe3
 
   }
   
