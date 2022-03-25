@@ -11,6 +11,11 @@ body {
     overflow: hidden;
   }
   
+
+  // section a
+
+  
+  // section b
   
   @mixin desktop {
     @media only screen and (min-width: 768px){
@@ -20,11 +25,7 @@ body {
   
   // transform container to grid when going to desktop
   @include desktop {
-    .Patients {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-rows: repeat(4,100vh);
-    }
+
   }
   
   
