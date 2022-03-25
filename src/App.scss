@@ -1,4 +1,5 @@
 // default style
+
 body {
   margin: 0;
   padding: 0;
@@ -9,26 +10,34 @@ body {
   text-align: center;
   position: relative;
   cursor: default;  
-  overflow: hidden;
 }
 
 
+//section a
 #practitioners-section-a .practitioners-content-wrap {
+  position: relative;
   background-color: #334355;
   padding: 1em;
   display: flex;
   color: white;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
   flex-flow: row wrap;
 }
 #practitioners-section-a .practitioners-content-wrap > * {
   margin: 0em 0.5em 0em 0.5em;
 }
-#practitioners-section-a .practitioners-content-wrap > h5 {
-  font-size:0.85em;
+#practitioners-section-a .practitioners-content-wrap > section {
+  position: absolute;
+  right: 0em;
+  display: flex;
+  align-items: center;
 }
-#practitioners-section-a .practitioners-content-wrap > h5:nth-of-type(2) {
+#practitioners-section-a .practitioners-content-wrap > section h5 {
+  font-size:0.85em;
+  margin: 0em 1em 0em 1em;
+}
+#practitioners-section-a .practitioners-content-wrap >section h5:nth-of-type(2) {
   background-color:#86dcd8;
   color: black;
   padding: 1em;
@@ -41,7 +50,114 @@ body {
 #practitioners-section-a .practitioners-content-wrap img {
   height: 100%;
 }
+//section b
+#practitionerSignupForm{
+  background-color: #ceced4;
+  padding: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.form-practitioner{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+}
+.signUp{
+  border-radius: 8px;
+  margin: 3px;
+}
+#background-img{
+  background-image: url('./images/therapist.jpg');
+  padding: 20em;
+  background-repeat: no-repeat;
+}
+
+.practitioners-form h1{
+  color: #334355;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.practitioners-form h4{
+  color: white;
+  font-size: 1em;
+}
+
+.practitioners-form h5{
+  background-color:#86dcd8;
+  color: black;
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 0.75em;
+
+}
+
+//section c
+#practitioners-section-c .practitioners-content-wrap {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#practitioners-section-c .practitioners-content-wrap > .flex-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1em;
+}
+
+//section d 
+
+#practitioners-section-d .practitioners-content-wrap {
+  background-color:#334355;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+#practitioners-section-d .practitioners-content-wrap > h2{
+ color: white;
+ margin: 1em;
+}
+
+#practitioners-section-d .practitioners-content-wrap > .flex-item {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+  margin: 1em;
+  width: 70%;
+  background-color: white;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > h4 {
+  margin-left: 0.5em;
+  margin-top: 0em;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > h4:nth-of-type(1) {
+ color: turquoise;
+}
+#practitioners-section-d .practitioners-content-wrap > .flex-item > #image-wrap {
+  height: 300px;
+  width: 100%;
+  background-color: gray;
+}
+
+//section e 
+#practitioners-section-e .practitioners-content-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+  height: 20vh;
+  text-align: center;
+}
 
 @mixin desktop {
   @media only screen and (min-width: 768px){
@@ -49,12 +165,48 @@ body {
   }
 }
 
-// transform container to grid when going to desktop
+
+
 @include desktop {
-  .App {
-    display: grid;
-    // grid-template-columns: repeat(3,1fr);
-    // grid-template-rows: repeat(4,100vh);
+  //section c
+  #practitioners-section-c .practitioners-content-wrap {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5em;
+    height: 40vh;
   }
+  #practitioners-section-c .practitioners-content-wrap > h2 {
+    position: absolute;
+    top:1em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  #practitioners-section-c .practitioners-content-wrap .flex-item {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 1em;
+    text-align: center;
+  }
+  //section d
+  #practitioners-section-d .practitioners-content-wrap {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #practitioners-section-d .practitioners-content-wrap > h2 {
+    position: absolute;
+    top: 0em;
+  }
+  #practitioners-section-d .practitioners-content-wrap .flex-item {
+   
+    margin-top: 10%;
+  }
+  
 }
 

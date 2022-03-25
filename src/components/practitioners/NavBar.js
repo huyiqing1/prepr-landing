@@ -10,8 +10,10 @@ const NavBar = () => {
         <img src={logo}></img>
         </div>
         <h2>TheraPortHealth</h2> 
+        <section>
         <h5>For Practitioners</h5>
         <h5>Sign up for free</h5>
+        </section>
       </div>
     </section>
   )
